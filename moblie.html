@@ -15,5 +15,47 @@
         <span id="sp4">결과물</span>
         <span id="sp5">추가정보</span>
     </header>
+    <script>
+        const $header = document.getElementsByClassName('header');
+        const $logo = document.querySelector('img');
+        $logo.addEventListener("click", () => {
+            location.href = 'index.html';
+        })
+        const $span1 = document.getElementById('sp1');
+        $span1.addEventListener("click", () => {
+            $span1.classList.toggle('white');
+            location.href = 'index.html';
+        }
+        );
+        const $span2 = document.getElementById('sp2');
+        $span2.addEventListener("click", () => {
+            $span2.classList.toggle('white');
+            location.href = 'index.html';
+        }
+
+        );
+        const $span3 = document.getElementById('sp3');
+        $span3.addEventListener("click", (e) => {
+            $span3.classList.toggle('white');
+            location.href = 'index.html';
+        }
+        );
+        const $span4 = document.getElementById('sp4');
+        $span4.addEventListener("click", (e) => {
+            $span4.classList.toggle('white');
+            location.href = 'index.html';
+        }
+        );
+        const $span5 = document.getElementById('sp5');
+        $span5.addEventListener("click", (e) => {
+            $span5.classList.toggle('white');
+            setTimeout(() => $span5.classList.toggle('white'), 500);
+            const $location5 = document.querySelector('.page1').offsetTop;
+            window.scrollTo({
+                top: $location5, behavior: 'smooth'
+            });
+        }
+        );
+    </script>
 </body>
 </html>
