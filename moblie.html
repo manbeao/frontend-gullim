@@ -57,6 +57,54 @@
         }
         );
     </script>
-    <nav></nav>
+    <nav>
+        <img id="qickM" src="./image/q1.png">
+        <div class="click mail dn">
+            <p>kny5076@naver.com</p>
+        </div>
+        <img id="qickC" src="./image/q2.png">
+        <div class="click call dn">
+            <p>010 - 8434 - 3632</p>
+        </div>
+        <img id="top" src="./image/q3.png">
+    </nav>
+    <!-- -----------------------------top버튼, 퀵메뉴 script---------------------------------------- -->
+    <script>
+        const $qmail = document.querySelector('#qickM')
+        console.log($qmail)
+        const $qcall = document.querySelector('#qickC');
+        const $mail = document.getElementsByClassName('mail');
+        const $call = document.getElementsByClassName('call');
+        const $top = document.querySelector('#top');
+
+        $qmail.addEventListener('mouseover', () => {
+            [...$mail].forEach(mail => mail.classList.remove('dn'))
+        });
+        $qmail.addEventListener('mouseout', () => {
+            [...$mail].forEach(mail => mail.classList.add('dn'))
+        });
+        $qcall.addEventListener('mouseover', () => {
+            [...$call].forEach(call => call.classList.remove('dn'))
+        });
+        $qcall.addEventListener('mouseout', () => {
+            [...$call].forEach(call => call.classList.add('dn'))
+        });
+
+        $qcall.addEventListener('click', () => {
+            if ($call.style.display === 'none') {
+                $call.style.display = 'block';
+            } else {
+                $call.style.display = 'none';
+            }
+        });
+        $top.addEventListener('click', () => {
+            const $location6 = document.querySelector('.page1').offsetTop;
+            window.scrollTo({
+                top: $location6, behavior: 'smooth'
+            });
+        })
+
+
+    </script>
 </body>
 </html>
