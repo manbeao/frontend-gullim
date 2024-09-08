@@ -106,5 +106,37 @@
 
 
     </script>
+
+<main>
+    <h3>지울림이란?</h3>
+    <img src="./image/img1.png" alt="지울림">
+    <p>
+        <지울림>은 서일대학교 미디어출판학과의<br>
+            벤처창업동아리이자 잡지 제작 동아리이다.
+    </p>
+    <input type="submit" value="자세히보기" id="seeMore">
+    <button>&nbsp;></button>
+    <img src="./image/img2.png" class="bg" alt="메인 비주얼">
+</main>
+<script>
+    const $seeMore = document.querySelector('#seeMore');
+    console.log($seeMore)
+    $seeMore.addEventListener('click', () => {
+        const $location7 = document.querySelector('#page2').offsetTop;
+        console.log($location7)
+        window.scrollTo({
+            top: $location7 - 600, behavior: 'smooth'
+        });
+    });
+    const $more = document.querySelector('button');
+    $more.addEventListener('click', () => {
+        const $location7 = document.querySelector('#page2').offsetTop;
+        window.scrollTo({
+            top: $location7 - 600, behavior: 'smooth'
+        });
+    })
+
+</script>
+<!-- -----------/main page----------- -->
 </body>
 </html>
